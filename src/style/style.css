@@ -1,0 +1,19 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.line_block {
+    width: 200px;
+    height: 200px;
+    background: #f1f1f1;
+    margin: 0 15px 15px 0;
+    padding: 10px;
+    box-shadow: 3px 10px 20px RGB(0 0 0/20%);
+}
+
+/*# sourceMappingURL=style.css.map */
