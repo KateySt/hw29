@@ -11,10 +11,10 @@ interface pageI {
 }
 
 const PaginationComponent = (): JSX.Element => {
-    let arr: any = {};
+    let arr: object = {};
     const [page, setPage] = useState<pageI>({page: 1});
 
-    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    const handleChange = (event: React.ChangeEvent<unknown>, value: number): void => {
         setPage({page: value});
     };
 
@@ -28,7 +28,7 @@ const PaginationComponent = (): JSX.Element => {
             root.render(data.data.results.map((text: any, id: number): JSX.Element => {
                 return <CardPerson key={id} date={text}/>;
             }))
-
+            return data.data.results;
         });
     }, [page]);
 

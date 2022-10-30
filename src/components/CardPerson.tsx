@@ -2,7 +2,11 @@ import React from 'react';
 import {Avatar} from "@mui/material";
 import "../style/style.css";
 
-const CardPerson = (props:any):JSX.Element => {
+interface cardI {
+    date: any;
+}
+
+const CardPerson = (props: cardI): JSX.Element => {
     return (
         <div className='line_block'>
             <div>
