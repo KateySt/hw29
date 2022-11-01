@@ -1,10 +1,11 @@
 import React from 'react';
 import PaginationComponent from "./components/PaginationComponent";
 
+
 function App() {
-  return (
+    return (
       <div>
-        <PaginationComponent/>
+          <PaginationComponent/>
       </div>
   );
 }

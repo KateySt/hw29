@@ -3,7 +3,8 @@ import {Avatar} from "@mui/material";
 import "../style/style.css";
 
 interface cardI {
-    date: any;
+    image: string;
+    name:string;
 }
 
 const CardPerson = (props: cardI): JSX.Element => {
@@ -11,15 +12,15 @@ const CardPerson = (props: cardI): JSX.Element => {
         <div className='line_block'>
             <div>
                 <Avatar
-                    src={props.date.image}
-                    alt={props.date.name}
+                    src={props.image}
+                    alt={props.name}
                     sx={{
                         width: 150,
                         height: 150,
                         margin: 'auto',
                     }
                     }/>
-                <p>{props.date.name}</p>
+                <p>{props.name}</p>
             </div>
         </div>
     );

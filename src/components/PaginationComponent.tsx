@@ -40,7 +40,7 @@ const PaginationComponent = (): JSX.Element => {
                         <Grid container justifyContent="center">
                             {
                                 pages.results.map((char: any, index: number):JSX.Element => {
-                                        return <CardPerson key={index} date={char}/>
+                                        return <CardPerson key={index} name={char.name} image={char.image}/>
                                     }
                                 )
                             }
