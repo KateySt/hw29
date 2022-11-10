@@ -2,12 +2,12 @@ import React from 'react';
 import {Avatar} from "@mui/material";
 import "../style/style.css";
 
-interface cardI {
+export interface cardI {
     image: string;
-    name:string;
+    name: string;
 }
 
-const CardPerson = (props: cardI): JSX.Element => {
+const CardPerson: React.FC<cardI> = (props: cardI): JSX.Element => {
     return (
         <div className='line_block'>
             <div>

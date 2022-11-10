@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {Grid, Pagination} from "@mui/material";
-import CardPerson from "./CardPerson";
+import CardPerson, {cardI} from "./CardPerson";
 import {jsx} from "@emotion/react";
 import JSX = jsx.JSX;
 import {useAppDispatch, useAppSelector} from "../app/hooks";
 import {getCharacterAsync, selectCharList} from "../features/rm/RickMortyPaginationSlice";
 
-export interface pageI {
+interface pageI {
     page: number;
 }
 
-const PaginationComponent = (): JSX.Element => {
+const PaginationComponent: React.FC = (): JSX.Element => {
     const pages = useAppSelector(selectCharList);
     const dispatch = useAppDispatch();
     const [page, setPage] = useState<pageI>({page: 1});
@@ -39,7 +39,7 @@ const PaginationComponent = (): JSX.Element => {
                     pages.results ?
                         <Grid container justifyContent="center">
                             {
-                                pages.results.map((char: any, index: number):JSX.Element => {
+                                pages.results.map((char:cardI, index: number):JSX.Element => {
                                         return <CardPerson key={index} name={char.name} image={char.image}/>
                                     }
                                 )
